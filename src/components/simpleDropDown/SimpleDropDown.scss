@@ -1,0 +1,160 @@
+// Dropdown Container
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+// Main Dropdown Button
+.dropDown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 20vw;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 16px;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border: 1px solid #1d4ed8;
+  }
+  
+  &.open {
+    border: 1px solid #1d4ed8;
+  }
+  
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+  }
+  
+  svg {
+    color: #9ca3af;
+  }
+}
+
+// Dropdown Button Wrapper
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+  &:hover .dropDown {
+    border: 1px solid #1d4ed8;
+  }
+}
+
+// Dropdown Menu
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+// Search Input
+.dropdown-search-input {
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 8px 8px 0 0;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+  
+  &:focus {
+    background: white;
+    border-bottom-color: #1d4ed8;
+  }
+  
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+// Dropdown Options
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: #f3f4f6;
+  }
+  
+  &.selected {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    
+    svg {
+      color: #1d4ed8;
+    }
+  }
+  
+  span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  svg {
+    color: #6b7280;
+    flex-shrink: 0;
+  }
+}
+
+// Option Content (Icon + Text)
+.dropdown-option-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+// Chevron Icon
+.chevron-icon {
+  color: #9ca3af;
+  margin-left: auto;
+}
+
+// Custom Scrollbar
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+  
+  &:hover {
+    background: #a8a8a8;
+  }
+}
